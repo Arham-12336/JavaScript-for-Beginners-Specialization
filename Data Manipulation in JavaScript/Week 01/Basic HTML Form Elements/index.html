@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Basics</title>
+</head>
+<style>
+    input,label{
+        display: inline-block;
+    }
+</style>
+<body>
+    <h1>Form Baics</h1>
+    <form method="post" action="processor.php">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="fname" value="hello" required>
+        <label for="favcolor">Favourite Color</label>
+        <input type="color" id="favcolor" name="favcolor">
+        <fieldset>
+            <legend>Do you want Spam?</legend>
+        <input type="radio" name="spam" id="spam-yes" value="yes">
+        <label for="spam-yes">Yes, spame</label>
+        <input type="radio" name="spam" id="spam-no" value="no" checked>
+        <label for="spam-n">No,Dont send spam</label>
+    </fieldset>
+    <fieldset>
+        <legend>Favourite Animal</legend>
+    <input type="checkbox" name="cat" id="cat" value="cat">
+    <label for="cat">Cat</label>
+    <input type="checkbox" name="dog" id="dog" value="dog" checked>
+    <label for="dog">Dog</label>
+    <input type="checkbox" name="llama" id="llama" value="llama" checked>
+    <label for="llama">LLama</label>
+</fieldset>
+<label for="cheese">Favourite Cheese</label>
+<select name="favcheese" id="cheese">
+    <option value="American" selected>American</option>
+    <option value="Pakistan">Pakistan</option>
+    <option value="Indian">Indian</option>
+    <option value="Latin">Latin</option>
+</select>
+
+<fieldset>
+    <legend>Please let us know</legend>
+    <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+</fieldset>
+<!-- <label for="comment">Please lets us know</label> -->
+<input type="submit" value="submit">
+
+
+    </form>
+    
+</body>
+</html>
