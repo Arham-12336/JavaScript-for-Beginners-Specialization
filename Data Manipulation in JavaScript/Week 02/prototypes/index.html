@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Demonstrating prototype and inheritance in JS
+
+    </h1>
+    <script>
+        function iphone(){} //constructor
+
+        iphone.prototype.faceID=function(){
+            console.log("Unlock withFaceID");
+        }
+        iphone.prototype.video=function(){
+            console.log("Unlock withVideo");
+        }
+
+        let myphone= new iphone();   
+        myphone.faceID();
+        myphone.app='instagram';
+        console.log(myphone);
+
+        const carManufacture={
+            name:"Honda",
+            model:"Accord",
+            trimlevel :"ex",
+            baseFeatures:["Wheels","engine","seats"],
+            entertainment: "crappy audio system"
+
+        }
+        const dealership=Object.create(carManufacture);
+        dealership.equipment ="roof jack";
+        dealership.warranty="extended";
+        dealership.branding="license plate frame";
+
+        const mycar=Object.create(dealership);
+
+        mycar.custome-"After market trailer hitch";
+        mycar.bumpersticket="save the llamea";
+        mycar.entertainment = "fancy audio system";
+
+        console.log(mycar.model);
+        console.log(mycar.entertainment);
+
+        for(const keys in mycar){
+            const myval=mycar[keys];
+            console.log(`key is "${keys}" and val is"${myval}"`);
+        }
+
+        // Checking the has own property
+
+        for (const keys in mycar){
+            if(mycar.hasOwnProperty(keys))
+            {
+                const val=mycar[keys];
+                console.log("Checking the property")
+                console.log(`key is "${keys}" and val is"${val}"`);
+            }
+        }
+
+
+    </script> 
+</body>
+</html>
