@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Arrow Functions</h2>
+    <script>
+        function makeUppercase(string) {
+            return string.toUpperCase();
+        }
+        console.log(makeUppercase('hello'));
+
+        // Lets make the same function using arrow functions
+
+        const uppercase=(string)=>{
+            return string.toUpperCase();
+        };
+        console.log(uppercase('hello'));
+
+
+        // Another way to make it
+
+        const upper=string=>string.toUpperCase();
+        console.log(upper('hello'));
+
+        const fruit=["banana", "orange", "lemon", "tomato"];
+        const upperfruit=[];
+
+        // fruit.forEach(function(eachfruit)
+        // {
+        //     upperfruit.push(eachfruit.toUpperCase());
+        // });
+
+
+        // Lets make the same function using arrow functions
+
+        fruit.forEach((eachfruit)=>{
+        upperfruit.push(eachfruit.toUpperCase());
+
+        });
+        console.log(upperfruit);
+
+
+
+        //constructor function example
+
+
+        const Employee=function(fname,lname,job)
+        {
+            this.fname=fname;
+            this.lname=lname;
+            this.job=job;
+            this.fullname=function() {return `${fname} ${lname}`;};
+        }
+        const id123=new Employee('arham','shams','Developer');
+        console.log(id123.fullname());
+
+        // Arrow function challenge
+
+        function greet(fname,lname){
+            return `${fname} ${lname}`;
+        }
+
+        const greering=(fname,lname)=>{
+            return `${fname} ${lname}`;
+        }
+        console.log(greet('ARHAM','shams'));
+        console.log(greering('usman','Yousuf'));
+
+        function square(x){
+            return x*x;
+        }
+        const sq=(x)=>{return x*x};
+        console.log(square(5));
+        console.log(sq(5));
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
